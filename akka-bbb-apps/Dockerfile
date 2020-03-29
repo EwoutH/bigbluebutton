@@ -14,7 +14,7 @@ RUN apt-get update \
 RUN cd /source \
  && sbt debian:packageBin
 
-# FROM ubuntu:16.04
+# FROM ubuntu:18.04
 FROM openjdk:8-jre-slim-stretch
 
 COPY --from=builder /source/target/*.deb /root/
